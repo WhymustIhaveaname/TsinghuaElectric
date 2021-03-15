@@ -1,0 +1,14 @@
+{
+    "username": "家园网账户", "password": "密码", "chrome_version": "./chromedriver88"
+}
+
+或者
+{
+    "username": "家园网账户", "password": "密码", "chrome_version": 88
+}
+
+或者
+{
+    "username": "家园网账户", "password": "密码", "chrome_version": null
+}
+表示自己的 chromedriver 在 PATH 中
