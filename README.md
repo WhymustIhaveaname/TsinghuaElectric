@@ -20,6 +20,11 @@ else:
     driver=webdriver.Chrome(options=chrome_options)
 ```
 
-仓库中预置了 chromedriver88 但愿你能用上. 下载的官方网站是 (https://chromedriver.chromium.org/downloads).
+release 里有 chromedriver 89 和 87 但愿你能用上. 下载的官方网站是 (https://chromedriver.chromium.org/downloads).
 
-可以通过注释 `chrome_options.add_argument("--headless")` 来获得有头(有GUI)的网页。
+可以通过注释 `chrome_options.add_argument("--headless")` 来获得有头(有GUI)的网页.
+
+### 定时执行
+
+Linux 下可以使用 crontab 定时执行脚本: [使用crontab重复执行脚本](https://github.com/WhymustIhaveaname/TsinghuaTunet#%E4%BD%BF%E7%94%A8crontab%E9%87%8D%E5%A4%8D%E6%89%A7%E8%A1%8C%E8%84%9A%E6%9C%AC).
+Windows 和 MacOS 一定有类似工具.
