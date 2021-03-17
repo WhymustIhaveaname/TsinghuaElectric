@@ -28,3 +28,11 @@ release 里有 chromedriver 89 和 87 但愿你能用上. 下载的官方网站�
 
 Linux 下可以使用 crontab 定时执行脚本: [使用crontab重复执行脚本](https://github.com/WhymustIhaveaname/TsinghuaTunet#%E4%BD%BF%E7%94%A8crontab%E9%87%8D%E5%A4%8D%E6%89%A7%E8%A1%8C%E8%84%9A%E6%9C%AC).
 Windows 和 MacOS 一定有类似工具.
+
+### Snap 安装的 Chrome 的问题
+
+Ubuntu 上使用 snap 安装的 chrome 会有一个奇怪的报错, 根据 [这条Stackoverflow](https://stackoverflow.com/questions/64992087/webdriverexception-unknown-error-devtoolsactiveport-file-doesnt-exist-while-t), 只需在相应位置加上
+```
+chrome_options.add_argument('--remote-debugging-port=9222')
+```
+即可解决.
