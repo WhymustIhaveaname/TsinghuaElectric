@@ -26,6 +26,8 @@ SLEEP_HIGH=1.5
 def get_elec(username,password,chrome_version):
     chrome_options=Options()
     chrome_options.add_argument("--headless")
+    #https://stackoverflow.com/questions/64992087/webdriverexception-unknown-error-devtoolsactiveport-file-doesnt-exist-while-t
+    chrome_options.add_argument('--remote-debugging-port=9222')
     if isinstance(chrome_version,int):
         driver=webdriver.Chrome(executable_path="./chromedriver%s"%(chrome_version),options=chrome_options)
     elif isinstance(chrome_version,str):
@@ -62,6 +64,8 @@ def get_elec(username,password,chrome_version):
     log("electricity remain: %s"%(elec_detail.text))
     elec_time=driver.find_element_by_id("Netweb_Home_electricity_DetailCtrl1_lbltime")
     log("%d, %s, %s"%(time.time(),elec_detail.text,elec_time.text),logfile="elec_remain.log")
+    with open("elec_remain.html","w") as f:
+        f.write("%s"%(elec_detail.text))
 
 if __name__ == '__main__':
     try:
