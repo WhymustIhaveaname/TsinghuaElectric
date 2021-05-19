@@ -7,9 +7,11 @@
 复制 `config.example.json` 至 `config.json` 并更改相关配置后即可 `python3 elec.py`.
 
 其中 `chrome_version` 字段有些迷惑, 它可以是:
+
 * 字符串, 表示 chromedriver 的路径
 * 数字, 表示 chromedriver 是 "chromedriverxx"
 * null, 表示 chromedriver 在 PATH 中
+
 相关代码是
 ```
 if isinstance(chrome_version,int):
